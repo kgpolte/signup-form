@@ -6,7 +6,8 @@
 
 :root {
     height: 100%;
-    --form-padding-left: 3em;
+    --form-padding-left: 3rem;
+    --form-padding-right: 8rem;
     --main-font: 'Lucida Sans',
                  'Lucida Sans Regular',
                  'Lucida Grande',
@@ -14,6 +15,13 @@
                  Geneva,
                  Verdana,
                  sans-serif;
+    --light-green: #819d67;
+    --dark-green: #596d48;
+    --offwhite: #fefefe;
+    --background: #f9fafb;
+    --light-gray: #e5e7eB;
+    --dark-blue: #1f2937;
+    --label-gray: #575858;
 }
 
 body {
@@ -21,11 +29,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background: var(--background);
 }
 
 #sidebar {
   height: 100vh;
-  width: 30vh;
+  width: 40vh;
 }
 
 #sidebar > img {
@@ -48,27 +57,54 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: var(--main-font);
 }
 
-#signup-form-wrapper > p {
-  font-family: var(--main-font);
+#signup-form-header {
   font-weight: bold;
+  font-size: 1.4rem;
   padding-left: var(--form-padding-left);
+  padding-right: var(--form-padding-right);
+  margin-bottom: 2em;
 }
 
 #signup-form-wrapper > #login-text {
-  font-weight: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-left: var(--form-padding-left);
+  margin: 1.5rem 0rem 0rem 0rem;
+}
+
+#signup-form-wrapper > #login-text > a {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 #signup-form-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-row {
+  display: flex;
+  gap: 3em;
 }
 
 #create-account {
-  margin-top: 2em;
-  padding: 1em var(--form-padding-left);
+  margin-top: 2rem;
+  padding: 1rem 3.5rem;
+  color: var(--offwhite);
+  background: var(--dark-green);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 2px 2px 8px #aaaa;
+}
+#create-account:hover {
+  background: var(--light-green);
 }
 
 #form-submission {
@@ -79,21 +115,50 @@ fieldset {
   position: relative;
   margin: 0px;
   border: none;
-  padding: 2em
+  padding: 4em
            var(--form-padding-left)
            2em
            var(--form-padding-left);
-           box-shadow: 1px 1px 5px #ccc;
+  box-shadow: 2px 2px 8px #aaaa;
+  background: #fff;
 }
 
 legend {
-  /* position: absolute;
-  top: var(--form-padding-left);
-  left: var(--form-padding-left); */
+  position: absolute;
+  top: .8rem;
+  left: var(--form-padding-left);
   font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--dark-blue);
 }
 
 label {
   display: block;
+  color: var(--label-gray);
   font-family: var(--main-font);
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+input {
+  border-style: solid;
+  border-color: var(--light-gray);
+  border-width: 1px;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.3rem 0.4rem;
+  width: 240px;
+}
+input:focus,
+input.error:focus {
+  border: 1px solid #4a6ed6;
+  box-shadow: 2px 2px 4px #aaaa;
+  outline: none;
+}
+
+input.error {
+  border: 1px solid #f00;
 }
