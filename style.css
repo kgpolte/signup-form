@@ -1,3 +1,99 @@
+@font-face {
+    font-family: "norse-bold";
+    src: url("./fonts/norse-bold-webfont.woff2") format("woff2"),
+         url("./fonts/norse-bold-webfont.woff") format("woff");
+}
+
+:root {
+    height: 100%;
+    --form-padding-left: 3em;
+    --main-font: 'Lucida Sans',
+                 'Lucida Sans Regular',
+                 'Lucida Grande',
+                 'Lucida Sans Unicode',
+                 Geneva,
+                 Verdana,
+                 sans-serif;
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#sidebar {
+  height: 100vh;
+  width: 30vh;
+}
+
+#sidebar > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#sidebar > .logo-group {
+    display: flex;
+    align-items: center;
+}
+
+#sidebar > .logo-group > h1 {
+    font-family: "norse-bold";
+    font-size: 4em;
+}
+
+#signup-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#signup-form-wrapper > p {
+  font-family: var(--main-font);
+  font-weight: bold;
+  padding-left: var(--form-padding-left);
+}
+
+#signup-form-wrapper > #login-text {
+  font-weight: normal;
+}
+
+#signup-form-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+#create-account {
+  margin-top: 2em;
+  padding: 1em var(--form-padding-left);
+}
+
+#form-submission {
+  padding-left: var(--form-padding-left);
+}
+
+fieldset {
+  position: relative;
+  margin: 0px;
+  border: none;
+  padding: 2em
+           var(--form-padding-left)
+           2em
+           var(--form-padding-left);
+           box-shadow: 1px 1px 5px #ccc;
+}
+
+legend {
+  /* position: absolute;
+  top: var(--form-padding-left);
+  left: var(--form-padding-left); */
+  font-family: var(--main-font);
+}
+
+label {
+  display: block;
+  font-family: var(--main-font);
 }
