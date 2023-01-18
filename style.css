@@ -22,6 +22,7 @@
     --light-gray: #e5e7eB;
     --dark-blue: #1f2937;
     --label-gray: #575858;
+    --error-red: #c13838;
 }
 
 body {
@@ -152,13 +153,18 @@ input {
   padding: 0.3rem 0.4rem;
   width: 240px;
 }
+
+input[type="password"]:valid {
+  border-color: var(--light-gray);
+}
+
 input:focus,
 input.error:focus {
-  border: 1px solid #4a6ed6;
+  border-color: #4a6ed6;
   box-shadow: 2px 2px 4px #aaaa;
   outline: none;
 }
 
 input.error {
-  border: 1px solid #f00;
+  border: 1px solid var(--error-red);
 }
