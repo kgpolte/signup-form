@@ -15,6 +15,8 @@
                Geneva,
                Verdana,
                sans-serif;
+  --standard-shadow: 3px 3px 8px #bfc2c2;
+
   --light-green: #819d67;
   --dark-green: #596d48;
   --offwhite: #fefefe;
@@ -22,6 +24,7 @@
   --light-gray: #e5e7eB;
   --dark-blue: #1f2937;
   --label-gray: #575858;
+  --focus-blue: #4a6ed6;
   --error-red: #c13838;
 }
 body {
@@ -69,12 +72,43 @@ body {
 
 /* Account creation form */
 #form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   font-family: var(--main-font);
 }
-#form-wrapper > p {
+#form-header {
+  padding-left: var(--form-padding-left);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+fieldset {
+  margin: 0px;
+  border: 0px;
+  padding: 4rem 0px 2em var(--form-padding-left);
+  background: #fff;
+  box-shadow: var(--standard-shadow);
+  position: relative;
+}
+legend {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+}
+label {
+  display: block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--label-gray);
+}
+#login-text {
   padding-left: var(--form-padding-left);
 }
+
+/* Input fields */
 #user-inputs {
   display: flex;
   flex-direction: column;
@@ -84,25 +118,21 @@ body {
   display: flex;
   gap: 3rem;
 }
-fieldset {
-  margin: 0px;
-  border: 0px;
-  padding: 4rem 0px 2em var(--form-padding-left);
-  background: #fff;
-  box-shadow: 3px 3px 8px #9fa1a1;
-}
-label {
-  display: block;
-  font-size: .7rem;
-}
-
-/* Input fields */
 input {
   font-size: 1rem;
-  padding: 0.3rem 0.4rem;
+  padding: 0.4rem 0.6rem;
+  border: solid 1px var(--light-gray);
+  border-radius: 3px;
+  width: 240px;
+}
+input:focus {
+  outline: none;
+  border-color: var(--focus-blue);
 }
 
 /* Buttons */
 button {
+  align-self: flex-start;
+  margin-top: 2rem;
   margin-left: var(--form-padding-left);
 }
