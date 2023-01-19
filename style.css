@@ -39,8 +39,8 @@ body {
 
 /* Sidebar stuff */
 #sidebar {
-  width: 50%;
-  min-width: 300px;
+  width: 33%;
+  flex-shrink: 0;
   position: relative;
   overflow: hidden;
 }
@@ -70,6 +70,18 @@ body {
   color: var(--offwhite);
   font-family: "norse-bold";
   font-size: 6rem;
+}
+#photo-credit {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  color: var(--offwhite);
+  font-family: var(--main-font);
+  font-weight: 200;
+}
+#photo-credit > a {
+  color: var(--offwhite);
 }
 
 /* Account creation form */
