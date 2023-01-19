@@ -5,7 +5,7 @@
 }
 :root {
   height: 100%;
-
+  --standard-shadow: 3px 3px 8px #bfc2c2;
   --form-padding-left: 3rem;
   --form-padding-right: 8rem;
   --main-font: 'Lucida Sans',
@@ -15,16 +15,16 @@
                Geneva,
                Verdana,
                sans-serif;
-  --standard-shadow: 3px 3px 8px #bfc2c2;
 
-  --light-green: #819d67;
-  --dark-green: #596d48;
   --offwhite: #fefefe;
   --background: #f9fafb;
   --light-gray: #e5e7eB;
-  --dark-blue: #1f2937;
+  --dark-green: #1c383b;
   --label-gray: #575858;
   --focus-blue: #4a6ed6;
+  --button-background: #e52da6;
+  --button-hover: #ec5bba;
+  --button-click: #f6c628;
   --error-red: #c13838;
 }
 body {
@@ -84,7 +84,7 @@ body {
   font-weight: 600;
 }
 fieldset {
-  margin: 0px;
+  margin: 2rem 0rem 0rem 0rem;
   border: 0px;
   padding: 4rem 0px 2em var(--form-padding-left);
   background: #fff;
@@ -94,6 +94,7 @@ fieldset {
 legend {
   font-size: 1.5rem;
   font-weight: 600;
+  color:var(--dark-green);
   position: absolute;
   top: 1rem;
 }
@@ -106,6 +107,13 @@ label {
 }
 #login-text {
   padding-left: var(--form-padding-left);
+  margin: 0;
+}
+
+#login-text > a {
+  color: var(--button-background);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* Input fields */
@@ -135,4 +143,19 @@ button {
   align-self: flex-start;
   margin-top: 2rem;
   margin-left: var(--form-padding-left);
+  margin-bottom: 2rem;
+  padding: 1em 3.5em;
+  border-style: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--offwhite);
+  background: var(--button-background);
+  box-shadow: var(--standard-shadow);
+}
+button:hover {
+  background: var(--button-hover);
+}
+button:active {
+  background: var(--button-click);
 }
