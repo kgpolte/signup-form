@@ -35,7 +35,6 @@ body {
   padding: 0;
   height: 100%;
   background: var(--background);
-  overflow: hidden;
 }
 
 /* Sidebar stuff */
@@ -43,6 +42,7 @@ body {
   width: 50%;
   min-width: 300px;
   position: relative;
+  overflow: hidden;
 }
 #sidebar > img {
   height: 100vh;
