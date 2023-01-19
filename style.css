@@ -1,55 +1,49 @@
 @font-face {
-    font-family: "norse-bold";
-    src: url("./fonts/norse-bold-webfont.woff2") format("woff2"),
-         url("./fonts/norse-bold-webfont.woff") format("woff");
+  font-family: "norse-bold";
+  src: url("./fonts/norse-bold-webfont.woff2") format("woff2"),
+        url("./fonts/norse-bold-webfont.woff") format("woff");
 }
-
 :root {
-    height: 100%;
+  height: 100%;
 
-    --form-padding-left: 3rem;
-    --form-padding-right: 8rem;
-    --main-font: 'Lucida Sans',
-                 'Lucida Sans Regular',
-                 'Lucida Grande',
-                 'Lucida Sans Unicode',
-                 Geneva,
-                 Verdana,
-                 sans-serif;
-    --light-green: #819d67;
-    --dark-green: #596d48;
-    --offwhite: #fefefe;
-    --background: #f9fafb;
-    --light-gray: #e5e7eB;
-    --dark-blue: #1f2937;
-    --label-gray: #575858;
-    --error-red: #c13838;
+  --form-padding-left: 3rem;
+  --form-padding-right: 8rem;
+  --main-font: 'Lucida Sans',
+               'Lucida Sans Regular',
+               'Lucida Grande',
+               'Lucida Sans Unicode',
+               Geneva,
+               Verdana,
+               sans-serif;
+  --light-green: #819d67;
+  --dark-green: #596d48;
+  --offwhite: #fefefe;
+  --background: #f9fafb;
+  --light-gray: #e5e7eB;
+  --dark-blue: #1f2937;
+  --label-gray: #575858;
+  --error-red: #c13838;
 }
-
 body {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    background: var(--background);
-    overflow: hidden;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--background);
+  overflow: hidden;
 }
-
 
 /* Sidebar stuff */
-
 #sidebar {
   width: 30%;
   min-width: 300px;
   position: relative;
 }
-
 #sidebar > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
 #logo-group {
   display: flex;
   align-items: center;
@@ -63,12 +57,10 @@ body {
   position: absolute;
   top: 20vh;
 }
-
 #odin-logo {
   height: 100%;
   object-fit: contain;
 }
-
 #logo-text {
   color: var(--offwhite);
   font-family: "norse-bold";
@@ -76,29 +68,41 @@ body {
 }
 
 /* Account creation form */
-
 #form-wrapper {
   width: 100%;
+  font-family: var(--main-font);
 }
-
+#form-wrapper > p {
+  padding-left: var(--form-padding-left);
+}
 #user-inputs {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
-
 .form-row {
   display: flex;
   gap: 3rem;
 }
-
 fieldset {
   margin: 0px;
   border: 0px;
-  padding: 0px;
+  padding: 4rem 0px 2em var(--form-padding-left);
   background: #fff;
   box-shadow: 3px 3px 8px #9fa1a1;
 }
-
 label {
   display: block;
+  font-size: .7rem;
+}
+
+/* Input fields */
+input {
+  font-size: 1rem;
+  padding: 0.3rem 0.4rem;
+}
+
+/* Buttons */
+button {
+  margin-left: var(--form-padding-left);
 }
