@@ -27,7 +27,7 @@
       <p>You <em>know</em> you want to.</p>
     </div>
 
-    <form action="" method="get">
+    <form action="" method="get" novalidate>
       <fieldset>
         <legend>Let's do this!</legend>
         <p>Required fields are marked with a <span style="font-weight:bold">*</span></p>
@@ -35,34 +35,35 @@
           <div class="form-row">
             <div class="widget">
               <label for="first" class="required">FIRST NAME</label>
-              <input type="text" required>
+              <input type="text" id="first" name="first-name" required>
             </div>
             <div class="widget">
               <label for="last" class="required">LAST NAME</label>
-              <input type="text" required>
+              <input type="text" id="last" name="last-name" required>
             </div>
           </div>
           <div class="form-row">
             <div class="widget">
               <label for="email" class="required">EMAIL</label>
-              <input type="email" required>
+              <input type="email" id="email" name="email" required>
             </div>
             <div class="widget">
               <label for="phone">PHONE NUMBER</label>
-              <input type="text">
+              <input type="text" id="phone" name="phone">
             </div>
           </div>
           <div id="passwords" class="form-row">
             <div class="widget">
               <label for="pwd1" class="required">PASSWORD</label>
-              <input type="password" class="error" required>
+              <input type="password" id="pwd1" name="pwd1" class="error" required>
             </div>
             <div class="widget">
               <label for="pwd2" class="required">CONFIRM PASSWORD</label>
-              <input type="password" class="error" required>
+              <input type="password" id="pwd2" name="pwd2" class="error" required>
             </div>
           </div>
         </div>
+        <div id="error-msg" aria-live="polite"></div>
       </fieldset>
       <button>Create Account</button>
     </form>
@@ -70,6 +71,8 @@
     <p id="login-text">Already have an account? <a href="#">Log in</a></p>
 
   </div>
+
+  <script src="./validate.js"></script>
 </body>
 
 </html>
