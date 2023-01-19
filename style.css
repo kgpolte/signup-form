@@ -7,7 +7,7 @@
   height: 100%;
   --standard-shadow: 3px 3px 8px #bfc2c2;
   --form-padding-left: 3rem;
-  --form-padding-right: 8rem;
+  --form-padding-right: 10rem;
   --main-font: 'Lucida Sans',
                'Lucida Sans Regular',
                'Lucida Grande',
@@ -80,6 +80,7 @@ body {
 }
 #form-header {
   padding-left: var(--form-padding-left);
+  padding-right: var(--form-padding-right);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -133,9 +134,13 @@ input {
   border-radius: 3px;
   width: 240px;
 }
+input.error {
+  border-color: var(--error-red);
+}
 input:focus {
   outline: none;
   border-color: var(--focus-blue);
+  box-shadow: 1px 1px 3px #bfc2c2;
 }
 
 /* Buttons */
