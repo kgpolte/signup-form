@@ -166,6 +166,10 @@ fieldset > p {
   margin-top: 0em;
   margin-bottom: 2em;
 }
+#error-msg {
+  color: var(--error-red);
+  padding-top: 1em;
+}
 
 /* Buttons */
 button {
