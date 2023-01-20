@@ -16,4 +16,4 @@ An assignment for the Odin Project - simple sign up form
 
 ## Data Usage
 
-- The "Create Acc
+- The "Create Account" button and "Log in" link do not link to anywhere or send the input data.
